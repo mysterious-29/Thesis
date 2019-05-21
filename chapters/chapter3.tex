@@ -10,10 +10,10 @@ The computer systems and the networks of these systems are increasing day by day
 An intrusion in any system is an attempt to unauthorized access of system's data or resources. This unauthorized access can be limited to only monitoring and analyzing traffic patterns or it can be an attempt to modify or alter the data packets. Try to make resources busy and unavailable for the intended authorized access is also an intrusion attack. An intrusion detection system basically monitors and analyzes the network traffic for any suspicious activity by any of the network node. IDS tries to analyze network behavior and monitors user activity. IDS comes under passive defence category as these system tries to detect intrusion attack rather than preventing attack. These systems can only capable of reporting and alarming to administration to take some action. An IDS which can also take some required action to prevent the attack on its own, is known is Intrusion prevention System (IPS). An ideal IDS tries to minimize false positive rate with high detection rate. Also less energy consumption and faster computation or attack detection is desired feature of IDS. Main components of any IDS is shown in figure \ref{IDS-Component} \cite{alrajeh2013intrusion} are -
 \begin{enumerate}[label=\textbf{\roman*}]
 \item \textbf{Monitoring} This component mainly monitors traffic in the network, availability of resources. Events at each node, network congestion, packet delay, neighbor monitoring is also done by monitoring component.
-\item \textbf{Analysis and Detection} This module of IDS implements the detection methodology for intrusion. It is the main component in the IDS where all monitored traffic patterns, events are analyzed to make decision regarding maliciousness of a node.
+\item \textbf{Analysis and Detection} This module of IDS implements the detection method for intrusion. It is the main component in the IDS where all monitored traffic patterns, events are analyzed to make decision regarding maliciousness of a node.
 \item \textbf{Alarm} Alarm component is responsible for generating responses as alarm to administration if a malicious activity is detected.
 \end{enumerate}
-\begin{figure}[h]
+\begin{figure}[tp]
 \center	
 \includegraphics[width=1.75in, height=2.5in] {Figures/PDF/IDS-Components.pdf}
 \caption{Components of IDS}
@@ -25,7 +25,7 @@ An IDS is a tool which either installed at network strategic points or at each h
 \section{Classification of IDS}
 IDS classification has two broad categories - Signature-based and Anomaly-based, which are based on intrusion detection strategy. IDS can also be classified based on the location of data in two categories - Host-based and Network-based. More classification categories are shown in figure \ref{IDS-Classification} \cite{alrajeh2013intrusion, farooqi2009intrusion} are described below.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \center	
 \includegraphics[width=\textwidth, height=5in] {Figures/PDF/IDS_Classification.pdf}
 \caption{Classification of IDS}
