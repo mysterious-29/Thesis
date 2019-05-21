@@ -1,0 +1,119 @@
+% Original Author: Atul Agarwal (atul2841996@gmail.com)
+% NIT Hamirpur, India-177005
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,timesnewroman,12pt,twoside]{report}
+%\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1in}
+\usepackage{authblk,lineno,hyperref,color,lscape,url,sectsty}
+\usepackage[autostyle]{csquotes}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[labelfont=bf]{caption}
+\usepackage{emptypage}
+\usepackage{array,float,multirow,graphicx,setspace,cleveref,cite,url,titlesec,tocloft}
+%\usepackage{mathrsfs}
+\usepackage{}
+\usepackage{amsmath,amsfonts,mathtools,notoccite}
+\usepackage{chngcntr,rotating,pdflscape,enumitem,algpseudocode,algorithm,subcaption}
+\usepackage{calligra}
+\numberwithin{equation}{section}
+\linespread{1.5}
+\titleformat{\chapter}[display]
+%{\normalfont\huge \bfseries}{\chaptertitlename\ \thechapter}{5pt}{\Huge}
+{\normalfont \huge \bfseries\color{black}}{\chaptertitlename\ \thechapter}{8pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{0pt}{10pt}
+\graphicspath{{./Figures/}}
+\renewcommand\cftaftertoctitle{\par\noindent\rule{\textwidth}{2pt}\par\vskip -3.5em}
+\renewcommand\cftafterloftitle{\par\noindent\rule{\textwidth}{2pt}\par\vskip-3.0em}
+\renewcommand\cftafterlottitle{\par\noindent\rule{\textwidth}{2pt}\par\vskip-3.0em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	%%%%%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\input{Ancillary/titlepage.tex}        % title page
+	\clearpage
+	%%%%%%%%%%%%%%%%%%%  Certificate page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{roman}
+	\input{Ancillary/certificate.tex}     
+	\addcontentsline{toc}{chapter}{Certificate} 
+	\clearpage
+	%%%%%%%%%%%%%%%%%%% Dedication page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%%%%%%%%%%%%%%%%%%% Acknowledgement page %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{Ancillary/acknowledgment.tex}
+    \addcontentsline{toc}{chapter}{Acknowledgments}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%% Abstract page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Ancillary/abstract.tex}
+	\addcontentsline{toc}{chapter}{Abstract}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%% Table of contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{flushright}
+		\tableofcontents
+	\end{flushright}
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%%%%%%% Table of figures %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{flushright}
+		\listoffigures
+		\addcontentsline{toc}{chapter}{List of Figures}
+	\end{flushright}	
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%%%%%%% Table of tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{flushright}
+		\listoftables
+		\addcontentsline{toc}{chapter}{List of Tables}
+	\end{flushright}
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%%%%%%% Table of acroymns %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Ancillary/LOA.tex}
+	\addcontentsline{toc}{chapter}{List of Acronyms/Abbreviations}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%% Table of symbols %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \input{Ancillary/LOS.tex}
+% 	\addcontentsline{toc}{chapter}{List of Symbols}
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%% Chapters 1-7 %%%%%%%%%%%%%%
+	\pagenumbering{arabic}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter1.tex}
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter2.tex}
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter3.tex}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter4.tex}
+% 	\cleardoublepage
+    \clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter5.tex}
+	\clearpage	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter6.tex}
+% 	\cleardoublepage
+	\clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-7 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter7.tex}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of publications %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Ancillary/listofpublications.tex}
+	\addcontentsline{toc}{chapter}{List of Publications}
+    \clearpage
+% 	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\bibliography{thesisref}
+	\bibliographystyle{unsrt}
+
+\end{document}
