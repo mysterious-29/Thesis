@@ -51,14 +51,21 @@ To build the dataset it was required that each sensor node must monitor it's nei
 \end{longtable}
 
 
+
 \section{Proposed approach} \label{SPA}
-This section describes how proposed system works. Basically, to simulate the attack environment, energy model of leach is implemented with attacks of like blackhole attack on top of leach which is described in section \ref{SSLeach}. Also, by using this WSN-DS dataset an Neural Network classifier is also trained to classify attack models which is presented in section \ref{SSNN}. Cumulatively, this approach can be referred as signature-based (rule-based or misuse) IDS. 
+This section describes how proposed system works. Basically, to simulate the attack environment, energy model of leach is implemented with attacks of like blackhole attack on top of leach which is described in section \ref{SSLeach}. Also, by using this WSN-DS dataset an Neural Network classifier is also trained to classify attack models which is presented in section \ref{SSNN}. Cumulatively, this approach can be referred as signature-based (rule-based or misuse) IDS.
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics{Figures/PDF/WSN-DS.pdf}
+%     \caption{Sample Dataset}
+%     \label{fig:dataset}
+% \end{figure}
     \subsection{LEACH} \label{SSLeach}
     Wireless sensor network has some limitations described in section \ref{WSNChallenges}, like limited battery power. So, energy needs to be utilized efficiently in multihop wireless communication to minimize dead nodes, while network remains operational. To maintain continuous network services chosen communication protocol has to be energy efficient. The dataset WSN-DS was also created using such protocol – Low Energy Adaptive Clustering Hierarchy (LEACH). 
     \par LEACH \cite{palan2017low} is adaptive protocol which uses clustering of sensor node and distributes energy load equally in in all nodes of cluster. This routing algorithm works in two phases as shown in figure \ref{LeachPhases}. Phase 1 is Setup-phase where election of Cluster head, joining of member node in clusters, and TDMA time slots allotted to each member node by cluster head. In phase 2 which is steady-state phase, member nodes sends their data to cluster head in their allotted time slot. LEACH also involves data aggregation at cluster head, aggregated data is then sent to base station.
     \begin{figure}[h]
     \center	
-    \includegraphics[scale=0.8]{Figures/PDF/LeachPhases.pdf}
+    \includegraphics[width=5.5in, height=5in] {Figures/PDF/LeachPhases.pdf}
     \caption{LEACH-Phases.}
     \label{LeachPhases}	
     \end{figure}
