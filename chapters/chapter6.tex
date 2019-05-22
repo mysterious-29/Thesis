@@ -34,9 +34,9 @@ MAC protocol & CSMA/TDMA \\ \hline
      \caption{Energy Model of WSN}
      \label{energy}
     \end{figure}
-Residual energy comparison presents the results of reading of energy model of WSN in case of two attacks - sinkhole and blackhole. These attacks are implemented in LEACH routing protocol and resultant graph \ref{energy} reading shows comparison with normal behavior of system without attack. As we can observe from graph that energy left in the network is highest in case of no attack while network energy goes zero in case of sinkhole attack at the earliest because compromised nodes advertise their fake high energy \cite{salehi2013detection}. In case of blackhole attack the nodes which are compromised, do not forward data packets hence their residual energy remains in the network \cite{wazid2013detection}.  
+Residual energy comparison presents the results of reading of energy model of WSN in case of two attacks - sinkhole and blackhole. These attacks are implemented in LEACH routing protocol and resultant graph \ref{energy} reading shows comparison with normal behavior of system without attack. It is observed from the graph that energy left in the network is highest in case of no attack while network energy goes zero in case of sinkhole attack at the earliest because compromised nodes advertise their fake high energy \cite{salehi2013detection}. In case of blackhole attack the nodes which are compromised, do not forward data packets hence their residual energy remains in the network \cite{wazid2013detection}.  
 \section{Alive node Comparison}
-This section presents the results of reading of sensor nodes that are alive in WSN. Graph \ref{alive} shows comparison between blackhole, sinkhole and no attack situation in LEACH protocol. As we can observe from graph that alive nodes in the network are more in case of no attack while all nodes in network are dead in case of sinkhole attack earliest. This graph has been plot based on remaining energy of each node. A node is considered dead if it's energy is zero.
+This section presents the results of reading of sensor nodes that are alive in WSN. Graph \ref{alive} shows comparison between blackhole, sinkhole and no attack situation in LEACH protocol. Graph shows that alive nodes in the network are more in case of no attack while all nodes in network are dead in case of sinkhole attack earliest. This graph has been plot based on remaining energy of each node. A node is considered dead if it's energy is zero.
     \begin{figure}[tp]
      \centering
      \includegraphics[width=5.5in, height=4in] {Figures/PNG/alive.png}
@@ -51,7 +51,7 @@ This section presents the results of reading of sensor nodes that are alive in W
      \label{packets}
     \end{figure}
 \section{Packets Sent to Base Station Comparison}
-Data packets sent to base station from cluster heads are shown in figure \ref{packets}. The graph shows comparison between blackhole, sinkhole and no attack situation in LEACH protocol. As we can observe from graph that Packets Sent to BS in the network are more in case of no attack and minimum in case of black hole attack as compromised node drops all the data packets.
+Data packets sent to base station from cluster heads are shown in figure \ref{packets}. The graph shows comparison between blackhole, sinkhole and no attack situation in LEACH protocol. This graph shows that Packets Sent to BS in the network are more in case of no attack and minimum in case of black hole attack as compromised node drops all the data packets.
 
 \section{Neural Network Model Results}
 \label{NNresults}
