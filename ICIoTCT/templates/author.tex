@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a proceedings volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{svproc}
+%
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% to typeset URLs, URIs, and DOIs
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{nopageno}
+\def\UrlFont{\rmfamily}
+
+\begin{document}
+\mainmatter              % start of a contribution
+%
+\title{A Study of Intrusion Detection System in
+Wireless Sensor Network}
+%
+\titlerunning{IDS in WSN}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Atul Agarwal\inst{1} \and Dr. Narottam Chand Kaushal\inst{2}}
+%
+\authorrunning{A. Agarwal et al.} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+% \tocauthor{Ivar Ekeland, Roger Temam, Jeffrey Dean, David Grove,
+% Craig Chambers, Kim B. Bruce, and Elisa Bertino}
+%
+\institute{National Institute of Technology, Hamirpur, H.P. 177005, India,\\
+\email{atul2841996@gmail.com}
+\and
+National Institute of Technology, Hamirpur, H.P. 177005, India,\\
+\email{nar@nith.ac.in}}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+Wireless Sensor Networks are most widely used in networking because of their large application domain. These networks due to their nature and appealing features, like multihop wireless communication, deployment in a hostile unprotected environment, low installation cost, auto-configurable etc, are very prone to security. Sensors are small devices deployed in the unprotected region and are vulnerable to attacks. To collect information from the surroundings sensor node senses information and follows multi-hop communication and the data reaches to sink. In these networks, there is no monitoring of information flow, hence security is a big concern. To provide security in Wireless Sensor Network operations, all kinds of intrusions should be detected and appropriate action must be taken against them in order to ensure that there is no harm done to the sensor network. This paper presents a review of Intrusion Detection Systems in Wireless Sensor Networks. Out of several detection techniques, this paper focuses on signature-based, anomaly-based and hybrid-based techniques. Various detection models are examined based on certain parameters. This paper summarizes various Intrusion Detection algorithms with their features which are used in Wireless Sensor Networks.
+% We would like to encourage you to list your keywords within
+% the abstract section using the \keywords{...} command.
+\keywords{wireless sensor network, intrusion detection system, misuse-based, anomaly-based, hybrid-based}
+\end{abstract}
+%
+\section{Introduction}
+%
+Wireless Sensor Network (WSN) has a number of sensor nodes. These sensor nodes are having the property of auto-configuration and self-organization. Network architecture follows decentralization and is distributed in nature. WSN has a number of application in the areas of environmental monitoring like air, water and soil, structural monitoring, human activity, and behavioral monitoring, military surveillance, asset tracking and so on \cite{akyildiz2002wireless}. The advantage of WSN nodes is their small size and these can be placed at some place where surveillance by a wired network or human is not possible. These small nodes are deployed in thousands in number to monitor temperature, pressure etc. These nodes are always prone to physical damage because these are deployed in the open and unprotected environment. Self-organizing and auto-configuration in nature, limited battery, and bandwidth, distributed and decentralization, multihop communication, are some characteristics which may lead to expose this network to many security attacks in all layers of OSI model. In order to provide protection to wireless sensor networks, many solutions such as cryptography and secure routing, key exchange and authentication are proposed. These methods are used to provide security from outside attack up to some level but these cannot eliminate all security attacks \cite{ping2008distributed}. To detect an inside attack Intrusion Detection System (IDS) is introduced which can deal with wide range attacks in WSN.\par
+Security attack in wireless sensor network is either active or passive. In passive attack attacker generally, hide and collects data by tapping communication link but does not modify it. Traffic analysis, malfunctioning of a node, eavesdropping comes under passive attack. The active attack affects the operation of the network. An active attack can lead to termination or degradation in networking services. Denial-of-service (DoS, DDos), Network jamming, warmhole, blackhole, sinkhole attacks are grouped in active attacks \cite{padmavathi2009survey}. Solutions to these attacks (active or passive) in any network involves Prevention, Detection, and Mitigation \cite{fuchsberger2005intrusion}. In prevention step, the technique provides defense against attack i.e. it prevents the attack. Detection step comes into action when an attacker has found a way to pass prevention technique. This involves to detect or identify the node which has been attacked (being aware of the presence of attack). Mitigation aims to remove the attack detected in the detection step by taking action against the compromised node.\par
+Intrusion is any activity in a network which is not authorized which affects network either passively or actively. If prevention of such activity is not provided in the first line of defense in WSN security then Intrusion Detection System comes into play as the second line of defense. Intrusion detection is performed by the network members nodes by detecting any suspicious behavior. After detection, it cannot take action on it but it raises an alarm to the controller. IDS provides information to the controller about intruder information (identification of node or region, location, time and date of intrusion, an activity of intrusion, type of intrusion etc). This information is used in the third line of defense i.e. in mitigating the attack.\par
+IDS functionality is defined by the detection method which are mainly of two types- Anomaly-based, Misuse-based. Anomaly-based technique tries to finds the deviation from normal behavior. To flag operation as an anomaly, the regular observation of system must be there to accommodate system changes. Misuse-based technique tries to detect previously known attack with high detection rate by comparing the new attack signature with known signatures.
+\par
+This paper presents a survey of existing IDS in WSN. The paper is organized as follows: In Section II, our main focus is to examine existing intrusion detection techniques in the wireless sensor network. Section III, specifies the main characteristics and features of different IDS with their comparison. Section IV, concludes the paper.
+
+\section{Literature Review}
+Mainly there are two types of IDS- Rule-based IDS and Anomaly-Based IDS \cite{khan2010framework}. Rule-based IDS can detect previously known attacks with high precision because it takes help of built-in signatures. A rule-based technique was developed \cite{jha2002building} which compares the incoming information with known information. But the problem was that signature-based IDS cannot detect a new attack because its signature is not present. Anomaly-based IDS detects intrusion by monitoring statistical behavioral, can detect the new attack as well as common attacks having more false positive rates i.e. normal packet declared as abnormal. One particular method of threshold was developed to detect the new attacks \cite{xie2011anomaly}. Also, there can be multiple anomaly attacks or some attacks which are consisting of both the attacks, can be detected using Hybrid IDS (HIDS) \cite{sedjelmaci2011novel}. In HIDS, anomaly-based IDS is used as a filter and another one is used as the second level of IDS.\par
+In \cite{mehmood2018secure}, knowledge-based Intrusion Detection System is (KB-IDS) applied on cluster-based WSN in order to secure the network. Their method keeps a record of networks internal nodes behavior. They placed knowledge base at the base station and inference engines were used by cluster heads to access the knowledge base. Because of the continuous monitoring of nodes they were able to sense any potential threat and generate events against them to tackle the attack. This information goes to the base station through the inference engine. The cluster head concludes and reports back to the cluster head for the suspicious node.\par
+In \cite{yan2009hybrid}, HIDS on Cluster-based WSN (CWSN) is discussed. Cluster head collects the data from other sensor nodes in that cluster and aggregates it because CH has the higher capability. In this paper it they used 3 models - anomaly detection, misuse detection with decision-making model. First two models were able to detect intrusion from a large number of packets and then results from these two models were combined by decision-making model i.e. if an intrusion has occurred then this model will classify its type. This model then will inform to the administrator about the attack
+with details.\par
+In \cite{wang2011integrated}, three different individual intrusion detection systems were proposed for the heterogeneous wireless sensor network. An IDS was designed each for the sink, cluster head (CH) and sensor node (SN). The capability of IDS was depending upon the attack on a particular node. For sink node, IDS has the learning capabilities which helps network to deal with unknown attacks. For cluster head node, a host-based IDS was proposed without learning capability. This helps the network to detect known attacks and avoid resource wasting, efficiently. To detect and update the class of attack it uses a feedback mechanism. A simple and fast misuse IDS was proposed for SNs.\par
+In \cite{saeed2016random}, an intrusion detection system is presented which is very effective low-power WSN. This IDS mechanism uses a Random Neural Network (RNN). The IDS detects any performance degradation anomaly attack. It does not require any dedicated hardware and its attack detection accuracy was found to be 97.23\%. This model detects any anomaly by identifying any deviation of an event from previously learned normal network operations. This mechanism can also detect previously unknown attacks.\par
+In \cite{jinhui2018intrusion}, an intrusion detection system is discussed which uses Energy trust in WSN. This method specifically focuses on detecting hybrid DoS attack using effective node energy analysis. This method predicts energy consumption and correlates it with the security of nodes. The method assumes that a sensor node can monitor their own energy level and consumption. It also faces a problem when a node is being under attack by flooding then enemy may try to control the node which can show fake energy information.\par
+In \cite{kalnoor2018detection}, KMP Pattern matching technique was used to detect an intruder. In this, after receiving a pattern, a pattern matching linear time algorithm is used. When features are matched, accordingly a rule is applied to the data packet. Then it calls a plug-in, which is used to find the intrusion. If there is no problem and received packet found to be with the correct pattern then it is forwarded to its neighbors. If a suspicious pattern is detected then it performs functions accordingly, and trace instruction to trace out the intruder.\par
+In \cite{jianjian2018novel}, IDS based on improved AdaBoost- Radial basis function in Support vector machine is discussed. This system can detect and resist against DoS attack effectively. This system uses RBF- SVM as AdaBoost classifier by training. The IABRBFSVM algorithm is proposed by using the influence of parameter ‘σ’ and model training error ‘e’ on AdaBoost weights. Significantly improves network performance and lifetime, with short computation time and higher detection rate.\par
+In \cite{jin2017multi}, the intrusion detection method is discussed for cluster WSN, which uses trust values and multi-agent framework functioning. Trust value calculation and accuracy are calculated by Mahalanobis distance. Reduction in false positive rate is done by calculating tolerance factor in trust value calculation. This system was scalable as it uses a multi-agent framework. The proposed system was fault tolerant and can detect multiple attacks at the same time with a high detection rate.\par
+In \cite{eik2006intrusion}, An anomaly-based IDS was used to detect new attacks. Then, in order to understand routing in WSN for intrusion detection, they found a set of features. These features can be applied to all protocols. This IDS was able to detect main attacks in WSN but active sinkhole attacks can be detected effectively. Also, this method consumes less power as it does not require communication between nodes.\par
+In \cite{sedjelmaci2013efficient}, an IDS for cluster-based WSN is discussed. This IDS has different detection frameworks for different levels. The first framework runs at IDS agent at a low level, which is a specification based protocol. The second framework runs at the head node of the cluster (CH, medium level), which is a binary classification protocol. At Base station (higher level) a voting mechanism is applied which is used by cluster head to monitor its cluster head neighbors. This system was able to detect blackhole, warmhole, flooding, and selective forwarding attacks. The detection rate was almost 100\%. Time, energy consumed to detect was very low.\par
+
+\section{IDS - Features \& Limitations}
+This section compares features \& limitations of different IDS based on different parameters. Table \ref{tab:IDS_table} shows various intrusion detection techniques with their detection methods listed. Features and limitations of each IDS detection method is also given in table to compare and determine that some methods were best suited for specific kinds of attacks. 
+
+\begin{table}[H]
+    \centering
+    \caption{Study of Various Intrusion Detection Systems}
+    \begin{tabular}{|p{0.8cm}|p{2cm}|p{2.9cm}|p{3.5cm}|p{2.9cm}|}
+    %  \hline
+    %  \multicolumn{4}{|c|}{Country List} \\
+     \hline
+     S.N. & Proposed System & Method & Features & Limitations\\
+     \hline
+     1. & A. Mehmood et. al. \cite{mehmood2018secure} & Cluster-based IDS, uses knowledge base for storing patterns, inference engine. & Traffic is monitored and any suspicious event generated by an attacker node is blocked by the CH. & KB-IDS puts a load on a single node inside the cluster, faster battery drainage for cluster head.\\
+     \hline
+     2. & Saeed A. et. al. \cite{saeed2016random} & Uses Random Neural Network, without any dedicated hardware. & Very effective in low-power WSN, detects any performance degradation anomaly attack, can also detect previously unknown attacks. & Computation time, energy consumption was high as compared to others at the cost of accuracy.\\
+     \hline
+     3. & Jianjian D. et. al. \cite{jianjian2018novel} & Improved AdaBoost-Radial basis function in Support Vector Machine. & Detects DoS attack efficiently, improves network performance, short computation, high detection rate. & Only Focused on DoS attack, can;t detect multiple attacks. \\
+     \hline
+     4. & Jin X. et. al. \cite{jin2017multi} & Uses trust values and multi-agent framework functioning, uses Mahalanobis distance. & Reduction in false positive rate, scalable system, fault tolerant, can detect multiple attacks at the same time. & Trust value calculation and accuracy are calculated by Mahalanobis distance. \\
+     \hline
+     5. & W. Meng et. al. \cite{meng2014efm} & K-nearest neighbor (KNN) algorithm with filtering. Built with three components. & Resolves issues of network packet overload, false alarm rate. Provides efficient signature matching. & Expensive in terms of time for computation.\\
+     \hline
+     6. & G. Gowrisona et. al. \cite{gowrison2013minimal} & Uses Neural Network with KDD Cup99 data. & An adaptive method with higher detection accuracy. Detects DoS attacks with enhanced rules by learning. Efficient computational complexity of O(n). & No knowledge management system, implementation has to be in cloud-based environment.\\
+     \hline
+    \end{tabular}    
+    \label{tab:IDS_table}
+\end{table}
+\par
+
+\section{Conclusion}
+Applications of wireless sensor networks are so wide that WSN is reaching in all areas from military to medical. In all applications, data plays an important role and hence it must be kept secure. Various possible attacks try to modify data or analyze it. An outsider attack can be detected or prevented using Cryptography and other security mechanisms. When the attacker resides inside the network, in this situation the node which is compromised and under attack can lead to various security problems. Using this node any data/ information passing through this node can be manipulated. So, it is important to detect these inside attacks and prevent any data loss. Intrusion detection systems are designed for this purpose.\par
+In this paper, a detailed literature survey of the IDS is presented. Some of the IDS system able to detect known attack while some were able to detect unknown attacks too. Hybrid systems have also been designed in order to detect all kinds of security attacks in the wireless sensor network. Accuracy and high detection rate of some of these detection mechanisms were about 100\% and hence low false positive rate. Some IDS can detect all the attacks, while on the other hand some of those were designed to detect specific attacks efficiently. Furthermore, features and applications of different detection methodologies have been compared. Conclusively, this paper concludes various types of IDS. In the process of analyzing different detection techniques, it is observed that anomaly-based detection methods normally use statistical algorithms whereas signature-based detection methods generally uses knowledge-based algorithms. Also, it can be inferred that hybrid systems are more efficient in terms of detection rate with low false positive rate as compared to the anomaly and signature-based techniques.
+
+\bibliography{mybib}
+\bibliographystyle{unsrt}
+\end{document}
