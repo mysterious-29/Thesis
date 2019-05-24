@@ -63,13 +63,31 @@ This section describes how proposed system works. Basically, to simulate the att
     \subsection{LEACH} \label{SSLeach}
     Wireless sensor network has some limitations described in section \ref{WSNChallenges}, like limited battery power. So, energy needs to be utilized efficiently in multihop wireless communication to minimize dead nodes, while network remains operational. To maintain continuous network services chosen communication protocol has to be energy efficient. The dataset WSN-DS was also created using such protocol – Low Energy Adaptive Clustering Hierarchy (LEACH). 
     \par LEACH \cite{palan2017low} is adaptive protocol which uses clustering of sensor node and distributes energy load equally in in all nodes of cluster. This routing algorithm works in two phases as shown in figure \ref{LeachPhases}. Phase 1 is Setup-phase where election of Cluster head, joining of member node in clusters, and TDMA time slots allotted to each member node by cluster head. In phase 2 which is steady-state phase, member nodes sends their data to cluster head in their allotted time slot. LEACH also involves data aggregation at cluster head, aggregated data is then sent to base station.
-    \begin{figure}[h]
+    \begin{figure}[htb]
     \center	
     \includegraphics[width=5.5in, height=4.75in] {Figures/PDF/LeachPhases.pdf}
     \caption{LEACH-Phases.}
     \label{LeachPhases}	
     \end{figure}
-    \\
+    
+    % \begin{equation}
+    % T(n)=\left\{\begin{array}{ll}{\frac{0}{1-p \times\left(r \bmod p^{-1}\right)},} & {\forall_{n} \in N} \\ {0,} & {\text { otherwise }}\end{array}\right.
+    % \end{equation}
+    
+    % \begin{algorithm}[ht]
+    % \SetAlgoLined
+    % % \KwResult{Write here the result }
+    %  initialization++;\\
+    %   \eIf{$\left(r_{\mathrm{SN}_{i}}<T\left(\mathrm{SN}_{i}\right)\right)$}{ 
+    % %   instructions1\;
+    % %   instructions2\;
+    %     $\mathrm{Sensor Node}_{i}=\mathrm{Cluster Head}$
+    %   }{
+    %     $\mathrm{Sensor Node}_{i}=\mathrm{Cluster Member}$
+    %   }
+    %  \caption{Blackhole attack Model}
+    % \end{algorithm}
+    
     \subsection{Neural Network} \label{SSNN}
     A neural network classifier consists of number of neurons units, arranged in layers. Each layer takes some input vector and gives output by applying a non-linear function. This output works as input to next layer in feed-forward manner. In general, there is no feedback to previous layer. Final output layer has implementation of classification of attack. Figure \ref{NN} shows Neural Network model of this proposed system.
     \begin{figure}[h]
