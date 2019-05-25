@@ -7,7 +7,7 @@
 This Chapter presents the simulation and results of the research work. Simulation of this work is done in two parts. Part 1 uses Octave to simulate the energy model of WSN to examine some of the features of WSN-DS. This phase yields graph comparison between normal activity and attack. Part 2 is simulated using python and it's libraries. This work trains neural network model to classify attack category and then provides result graph in terms of accuracy. The simulation parameters used for part 2 simulation are shown in table \ref{tab:NetPar}.
 \begin{table}[bp]
 \centering
-\caption{Network Parameters}
+\caption{Network Parameters.}
 \label{tab:NetPar}
 % \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|}
@@ -31,7 +31,7 @@ MAC protocol & CSMA/TDMA \\ \hline
     \begin{figure}[ht]
      \centering
      \includegraphics[width=5in, height=4.2in] {Figures/PNG/energy.png}
-     \caption{Energy Model of WSN}
+     \caption{Energy model of WSN.}
      \label{energy}
     \end{figure}
 Residual energy comparison presents the results of reading of energy model of WSN in case of two attacks - sinkhole and blackhole. These attacks are implemented in LEACH routing protocol and resultant graph \ref{energy} reading shows comparison with normal behavior of system without attack. It is observed from the graph that energy left in the network is highest in case of no attack while network energy goes zero in case of sinkhole attack at the earliest because compromised nodes advertise their fake high energy \cite{salehi2013detection}. In case of blackhole attack the nodes which are compromised, do not forward data packets hence their residual energy remains in the network \cite{wazid2013detection}.  
@@ -40,14 +40,14 @@ This section presents the results of reading of sensor nodes that are alive in W
     \begin{figure}[tp]
      \centering
      \includegraphics[width=5.5in, height=4in] {Figures/PNG/alive.png}
-     \caption{Alive Nodes}
+     \caption{Alive nodes.}
      \label{alive}
     \end{figure}
 
     \begin{figure}[bp]
      \centering
      \includegraphics[width=5.5in, height=4in] {Figures/PNG/packets.png}
-     \caption{Data Packets sent to Base Station}
+     \caption{Data packets sent to base station.}
      \label{packets}
     \end{figure}
 \section{Packets Sent to Base Station Comparison}
@@ -59,13 +59,13 @@ Neural network model is being used to detect if any activity is malicious or not
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=5.5in, height=4in] {Figures/PDF/2hidden.pdf}
-    \caption{Neural Network Model Accuracy Graph with 2 hidden layers}
+    \caption{Neural network model accuracy result with 2 hidden layers.}
     \label{2hidden}
 \end{figure}
 
 \begin{table}[bp!]
 \centering
-\caption{Neural Network Model Result }
+\caption{Neural network model results.}
 \label{tab:result}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}|l|c|c|c|c|c|c|@{}}
@@ -82,16 +82,16 @@ X-axis on grpah shows iterations (epochs), Y-axis shows the accuracy metric. The
 \begin{figure}[h]
     \centering
     \includegraphics[width=5.5in, height=4in] {Figures/PDF/3hidden.pdf}
-    \caption{Neural Network Model Accuracy Graph with 3 hidden layers}
+    \caption{Neural network model accuracy graph with 3 hidden layers}
     \label{3hidden}
 \end{figure}
 
-\section{Comparison with other Neural Network Algorithms}
+\section{Comparison with other Neural Network algorithms}
 In \cite{saeed2016random}, an intrusion detection mechanism is presented which is very effective in low-power WSN. This IDS mechanism uses a Random Neural Network (RNN). The IDS detects any performance degradation anomaly attack. It does not require any dedicated hardware and its attack detection accuracy was found to be 97.23\%. This model detects any anomaly by identifying any deviation of an event from previously learned normal network operations. This mechanism can also detect previously unknown attacks.
 \par
 In \cite{Turkish2015ANN}, to avoid big security deficiencies an IDS for WSN using Neural Network is proposed. The proposed system was trained and tested by KDD99 dataset. This work was able to detect four group attack types from the dataset – Dos, Remote to Local Attack, Probing Attack, User to Root Attack. Performance of network using 41 features and 67500 observations came true as 0.8488. Fewer the training samples lesser the success rate for different attack types. They also showed that the success rate can be changed by number of hidden layers, number of neurons in each layer, feature selection etc.
-\par
-In \cite{almomani2016wsn}, 
+% \par
+% In \cite{almomani2016wsn}, 
 
 \section{Summary}
 To analyze certain features of dataset like, residual energy in the network, alive nodes, data packets sent to BS etc energy model of dataset is simulated in the Octave tool. Resultant graphs of these simulations helps to differentiate between attack and no attack situation. All the simulation in this part is performed for 1500 rounds of LEACH protocol which is shown on X-axis of each graph and Y-axis has specific feature. Also, This chapter presents a neural network learning approach to detect an intrusion activity using a dataset which is built using LEACH protocol. The accuracy measure of detection are 98.85\% if 2 hidden layers used for learning, and accuracy reaches to 99.24\% if 3 hidden layers used.

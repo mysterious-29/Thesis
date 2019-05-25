@@ -21,7 +21,7 @@ WSN-DS\cite{almomani2016wsn} dataset used in this approach helps in classificati
 \par
 To build the dataset it was required that each sensor node must monitor it's neighbor. Distribution of load and number of neighbor sensor nodes to monitor was a challenge which was taken care by many experiments. In the beginning of data collection, each node broadcasts \textit{Hello} message. After it, each node starts monitoring some nodes (5 nodes - result from experiments) from which it has received broadcast message. Then each node sends all details to it's cluster head which is further sent to base station at the end of each round. Dataset built with this procedure has 19 features which can help to know maliciousness of a node. These attributes are shown in table \ref{tab:WSNDS}.
 \begin{longtable}[c]{|p{0.5in}|p{1.5in}|p{3.5in}|}
-\caption{WSN-DS Description}
+\caption{WSN-DS Description.}
 \label{tab:WSNDS}\\
 \hline
 \multicolumn{1}{|c|}{\textbf{S.N.}} & \multicolumn{1}{c|}{\textbf{Attribute}} & \multicolumn{1}{c|}{\textbf{Detail}} \\ \hline
@@ -103,14 +103,14 @@ This section describes how proposed system works. Basically, to simulate the att
         \begin{figure}[hbp]
         \center	
         \includegraphics[width=4in, height=7.2in] {Figures/PDF/FlowChart.pdf}
-        \caption{Flow Chart for Neural Network model}
+        \caption{Flow Chart for Neural Network model.}
         \label{FlowChart}	
         \end{figure}
 
 \section{Procedure} \label{Procedure}
  To train this Neural Network one feature ‘Attack Type’ is used as label. Out of other remaining 18 features, 14 features has been used to get the best result out of training. Training starts by building a sequential model using Keras API which is a high-level API to build and train models in Tensorflow (an online machine learning library for research) . This sequential model assemble layers in stack. This model has a flexibility to add number of hidden layers using its built in functions. Detailed working of neural network model is explained in this section.
 Neural Network working model can be described in following 6 steps:
-\begin{enumerate}[label=\textbf{\roman*}]
+\begin{enumerate}[label=\textbf{\roman*}.]
 \item \textbf{Analyze the Dataset } Data is very important in every application of Neural Network learning. Analyzing data helps in feature extraction and selection. Analyzing dataset also includes analyzing Dataset, Attribute characteristics, Number of Instances, Attributes etc. Here, data is analyzed with the help of Pandas library of python. 
 \item \textbf{Prepare the dataset } Raw data is of no use. To make use of any data it must be structured in proper way. Here, representation of analyzed data in a n-dimensional matrix is done using NumPy library of python.
 
